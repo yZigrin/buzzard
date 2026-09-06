@@ -141,6 +141,7 @@ if [[ $IMAGE_NAME =~ "deck" ]]; then
     echo "Non-handheld hardware detected, unmasking PPD and masking powerstation".
     systemctl unmask tuned.service
     systemctl unmask tuned-ppd.service
+    systemctl mask inputplumber.service
     systemctl mask powerstation.service
     systemctl mask pulse8-cec-inputattach@.service
     systemctl mask rainshadow-cec-inputattach@.service
